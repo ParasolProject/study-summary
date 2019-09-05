@@ -1,0 +1,21 @@
+1、命令行参数处理 argparse
+构建命令行输入参数处理
+parse = argparse.ArgumentParsr()
+parse.add_argument('file')
+指定关键词参数，设置快捷参数
+parse.add_argument('-o','--output')
+指定关键词参数，指定类型，设置默认值
+parse.add_argument('--width',type=int,default=80)
+
+args = parse.parse_args()
+xxx = args.file
+xxx = args.width
+xxx = args.output
+
+2、PIL模块
+im = Image.open(image_path)
+重新设定图片尺寸，第二个参数中，Image.NEAREST表示输出低质量的图片
+im.resize((width,height),Image.NEAREST)
+
+im.getpixel((x,y))
+返回x,y位置像素的r,g,b值
